@@ -67,6 +67,12 @@ public class Part {
 		return this.serialNumber.hashCode();
 	}
 	
+	/**
+	 * @return Return the string “Part(serial-number)”.
+	 */
+	public String toString() {
+		return "Part(" + this.getSerial() + ")";
+	}
 }
 	
 
