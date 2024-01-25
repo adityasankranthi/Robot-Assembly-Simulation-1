@@ -25,12 +25,11 @@ public class Part {
 	 * Create a part with a random serial number.
 	 */
 	public Part() {
-		this("" + new Random().nextInt());
 		// TODO: call the other constructor with "this(...)"
 		// filling in the "..." with a random string which
 		// can indeed be a series of digits.
 		// Our solution uses "new Random().nextInt()" as part of this.
-		
+		this("RBT" + new Random().nextInt());
 	}
 	
 	// TODO: Methods of the class
