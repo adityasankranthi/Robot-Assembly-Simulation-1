@@ -35,11 +35,28 @@ public class Part {
 	
 	// TODO: Methods of the class
 	
-	/*
-	 * @return serial number
+	/**
+	 * @return the part’s serial number.
 	 */
 	public String getSerial() {
 		return this.serialNumber;
+	}
+	
+	/**
+	 * @param Object to be compared to.
+	 * @return Return true if the argument is a part with the same serial number as
+	 * this.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj instanceof Part) {
+			Part guest = (Part) obj;
+			if (guest.serialNumber.equals(this.serialNumber)) return true;	
+		}
+		return false;
 	}
 	
 	
