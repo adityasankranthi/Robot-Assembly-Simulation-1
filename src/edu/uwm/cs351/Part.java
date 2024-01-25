@@ -59,6 +59,13 @@ public class Part {
 		return false;
 	}
 	
+	/**
+	 * @return the hashcode of the serial number.
+	 */
+	@Override
+	public int hashCode() {
+		return this.serialNumber.hashCode();
+	}
 	
 }
 	
