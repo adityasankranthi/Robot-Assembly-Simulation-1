@@ -33,6 +33,16 @@ public class Part {
 		
 	}
 	
-	
 	// TODO: Methods of the class
+	
+	/*
+	 * @return serial number
+	 */
+	public String getSerial() {
+		return this.serialNumber;
+	}
+	
+	
 }
+	
+
