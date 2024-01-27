@@ -38,7 +38,7 @@ public class FixedRobot implements Robot {
                 leg2 = part;
                 return true;
             }
-        } else {
+        } else if (otherFunction == null){
 	        otherFunction = function;
 	        otherPart = part;
 	        return true;
@@ -49,7 +49,7 @@ public class FixedRobot implements Robot {
     @Override
     public Part removePart(String function) {
         Part removedPart = null;
-        if (function.equals(null)) {
+        if (function == null) {
             if (arm1 != null) {
                 removedPart = arm1;
                 arm1 = null;
@@ -96,10 +96,70 @@ public class FixedRobot implements Robot {
         return removedPart;
     }
 
-	@Override // required
-	public Part getPart(String function, int index) {
-		Part result = null;
-		// TODO
-		return result;
-	}
-}
+    public Part getPart(String function, int index) {
+    	if (index < 0 ) throw new IllegalArgumentException("index can't be negative");
+        if (function == null) {
+        	int currentIndex = 0;
+        	if (arm1 != null) {
+        		currentIndex = 0;
+        	}
+        	else if (arm2 != null) {
+        		currentIndex = 1;
+        	}
+        	else if (leg1 != null) {
+        		currentIndex = 2;
+        	}
+        	else if (leg2 != null) {
+        		currentIndex = 3;
+        	}
+        	else if (otherPart != null) {
+        		currentIndex = 4;
+        	}
+        	if (arm1 != null && 0 - currentIndex == index) {
+        		return arm1;
+        	}
+        	else if (arm2 != null && 1 - currentIndex == index) {
+        		return arm2;
+        	}
+        	else if (leg1 != null && 2 - currentIndex == index) {
+        		return leg1;
+        	}
+        	else if (leg2 != null && 3 - currentIndex == index) {
+        		return leg2;
+        	}
+        	else if (otherPart != null && 4 - currentIndex == index) {
+        		return otherPart;
+        	}
+        }
+        else if (function.equals(ARM)) {
+            if (index == 0 && arm1 != null) {
+                return arm1;
+            } else if (index == 1 && arm2 != null) {
+                return arm2;
+            } else if (index == 0 && arm1 == null && arm2 != null){
+                return arm2; 
+            }
+            else {
+            	return null;
+            }
+        } else if (function.equals(LEG)) {
+        	 if (index == 0 && leg1 != null) {
+                 return leg1;
+             } else if (index == 1 && leg2 != null) {
+                 return leg2;
+             } else if (index == 0 && leg1 == null && leg2 != null){
+                 return leg2; 
+             }
+             else {
+             	return null;
+             }
+        } else {
+            if (index == 0 && otherPart != null) {
+                return otherPart;
+            } else {
+                return null; 
+            }
+        }
+        return null;
+    }
+ }
