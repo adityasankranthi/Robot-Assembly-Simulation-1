@@ -15,7 +15,6 @@ public class Part {
 	 * @param serial serial number, must not be null
 	 */
 	public Part(String serial) {
-		// TODO: initialize the part after checking for errors.
 		if (serial == null) throw new NullPointerException("Null serial number");
 		this.serialNumber = serial;
 	}
@@ -24,7 +23,6 @@ public class Part {
 	 * Create a part with a random serial number.
 	 */
 	public Part() {
-		// TODO: call the other constructor with "this(...)"
 		// filling in the "..." with a random string which
 		// can indeed be a series of digits.
 		// Our solution uses "new Random().nextInt()" as part of this.
@@ -43,10 +41,8 @@ public class Part {
 	 * compares two part's serial number
 	 * @param Object, object to be compared to.
 	 * @return if the parts have the same serial number
-	 * the Object class's equals checks if two strings are equal 
-	 * part class's equals checks if two serial numbers are equal
 	 */
-	@Override
+	@Override //implementation
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;
@@ -61,10 +57,8 @@ public class Part {
 	/**
 	 * return the hash-code of the serial number.
 	 * @return hashcode of the serial number.
-	 * the Object class's hashCode returns the integer hash code value of the object.
-	 * part class's hashCode returns the hashcode of the serial number.
 	 */
-	@Override
+	@Override //implementation
 	public int hashCode() {
 		return this.serialNumber.hashCode();
 	}
@@ -73,9 +67,8 @@ public class Part {
 	 * String representation of the part's serial number
 	 * @return the string “Part(serial number)”.
 	 */
+	@Override //implementation
 	public String toString() {
 		return "Part(" + this.getSerial() + ")";
 	}
 }
-	
-

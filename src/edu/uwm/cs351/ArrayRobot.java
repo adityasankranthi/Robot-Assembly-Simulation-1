@@ -11,13 +11,17 @@ public class ArrayRobot implements Robot {
 	private String[] functions;
 	private Part[] parts;
 	
-	// TODO: First stub and then write this class
-	//required
+	/**
+	 * Create a new Array robot with default capacity and no parts.
+	 */
 	public ArrayRobot() {
 		this(DEFAULT_CAPACITY);
 	}
 	
-	// required
+	/**
+	 * Create a new Array robot with specified capacity and no parts.
+	 * @param capacity of the Array, must not be null
+	 */
 	public ArrayRobot(int capacity) {
 		functions = new String[capacity];
 		parts = new Part[capacity];

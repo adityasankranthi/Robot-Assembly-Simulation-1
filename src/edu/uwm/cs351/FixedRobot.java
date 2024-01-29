@@ -19,7 +19,7 @@ public class FixedRobot implements Robot {
 		// nothing to do
 	}
 	
-	@Override
+	@Override // required
     public boolean addPart(String function, Part part) {
         if (function == null || part == null) throw new NullPointerException("Function and part cannot be null");
         if (function.equals(ARM)) {
@@ -46,7 +46,7 @@ public class FixedRobot implements Robot {
         return false;
     }
 
-    @Override
+	@Override // required
     public Part removePart(String function) {
         Part removedPart = null;
         if (function == null) {
@@ -96,6 +96,7 @@ public class FixedRobot implements Robot {
         return removedPart;
     }
 
+	@Override // required
     public Part getPart(String function, int index) {
     	if (index < 0 ) throw new IllegalArgumentException("index can't be negative");
         if (function == null) {
