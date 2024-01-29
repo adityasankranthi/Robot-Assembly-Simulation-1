@@ -41,10 +41,10 @@ Friday 10pm deadline.*
 ### Review
 
 #### Did I correctly anticipate the difficulties?
-Yes, most of the test cases i was able correctly anticipate because I spent a considerable amount of my time planning on pen and paper to stick to the classes/ADTs description before starting to code.
+Yes, most of the test cases i was able to correctly anticipate because I spent a considerable amount of my time planning on pen and paper to stick to the classes/ADTs description before starting to code.
 
 #### How did the plan go?
-I think the plan went well because I've implemented most of my functions with if else statements like I initially planned, I did find an alternative way with switch cases but I choose to stick with if else conditions. I initially though that I could maybe track the indices of the parts with serial number(which I anyways could'nt because it was randomly generated) to use in FixedRobot because I miss understood that we were not supposed to use any local variables but after I've seen one of my colleague ask a similar question on piazza I got clarity and finally ended up utilizing a local variable to implement some of the methods.
+I think the plan went well because I've implemented most of my functions with if else statements like I initially planned, I did find an alternative way with switch cases but I choose to stick with if else conditions. I initially was in the assumption that I could maybe track the indices of the parts with serial number(which I anyways could'nt because it was randomly generated) to use in FixedRobot because I miss understood that we were not supposed to use any local variables but after I've seen one of my colleague ask a similar question on piazza I got clarity and finally ended up utilizing a local variable to implement some of the methods.
 ### Preview
 
 #### What should I do differently for next week's homework assignment?
