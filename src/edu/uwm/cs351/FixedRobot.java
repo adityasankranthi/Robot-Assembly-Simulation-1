@@ -100,6 +100,11 @@ public class FixedRobot implements Robot {
     public Part getPart(String function, int index) {
     	if (index < 0 ) throw new IllegalArgumentException("index can't be negative");
         if (function == null) {
+        	int arm1Index = 0;
+        	int arm2Index = 1;
+        	int leg1Index = 2;
+        	int leg2Index = 3;
+        	int otherPartIndex = 4;
         	int currentIndex = 0;
         	if (arm1 != null) {
         		currentIndex = 0;
@@ -116,19 +121,19 @@ public class FixedRobot implements Robot {
         	else if (otherPart != null) {
         		currentIndex = 4;
         	}
-        	if (arm1 != null && 0 - currentIndex == index) {
+        	if (arm1 != null && arm1Index - currentIndex == index) {
         		return arm1;
         	}
-        	else if (arm2 != null && 1 - currentIndex == index) {
+        	else if (arm2 != null && arm2Index - currentIndex == index) {
         		return arm2;
         	}
-        	else if (leg1 != null && 2 - currentIndex == index) {
+        	else if (leg1 != null && leg1Index - currentIndex == index) {
         		return leg1;
         	}
-        	else if (leg2 != null && 3 - currentIndex == index) {
+        	else if (leg2 != null && leg2Index - currentIndex == index) {
         		return leg2;
         	}
-        	else if (otherPart != null && 4 - currentIndex == index) {
+        	else if (otherPart != null && otherPartIndex - currentIndex == index) {
         		return otherPart;
         	}
         }

@@ -69,24 +69,24 @@ public class ArrayRobot implements Robot {
 	public Part getPart(String function, int index) {
 		if (index < 0 ) throw new IllegalArgumentException("index can't be negative");
 		Part result = null;
-		int count = 0;
+		int currentIndex = 0;
 		if (function == null) {
 			for (int i = 0; i < functions.length; i++) {
 	            if (functions[i] != null) {
-	                if (count == index) {
+	                if (currentIndex == index) {
 	                    return parts[i];
 	                }
-	                count++;
+	                currentIndex++;
 	            }
 	        }
 		}
 		else {
 			for (int i = 0; i < functions.length; i++) {
 	            if (functions[i] != null && functions[i].equals(function)) {
-	                if (count == index) {
+	                if (currentIndex == index) {
 	                    return parts[i];
 	                }
-	                count++;
+	                currentIndex++;
 	            }
 	        }
 		}

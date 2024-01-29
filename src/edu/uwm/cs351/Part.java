@@ -39,7 +39,7 @@ public class Part {
 	
 	/**
 	 * compares two part's serial number
-	 * @param Object, object to be compared to.
+	 * @param obj, object to be compared to.
 	 * @return if the parts have the same serial number
 	 */
 	@Override //implementation
