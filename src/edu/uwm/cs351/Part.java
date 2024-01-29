@@ -8,7 +8,6 @@ import java.util.Random;
  * Currently all it has is a serial "number" 
  */
 public class Part {
-	// TODO: Declare the (very simple) data structure.
 	private final String serialNumber;
 	
 	/**
@@ -32,19 +31,20 @@ public class Part {
 		this("RBT" + new Random().nextInt());
 	}
 	
-	// TODO: Methods of the class
-	
 	/**
-	 * @return the part’s serial number.
+	 * return the serial number.
+	 * @return serial number, the part's serial number
 	 */
 	public String getSerial() {
 		return this.serialNumber;
 	}
 	
 	/**
-	 * @param Object to be compared to.
-	 * @return Return true if the argument is a part with the same serial number as
-	 * this.
+	 * compares two part's serial number
+	 * @param Object, object to be compared to.
+	 * @return if the parts have the same serial number
+	 * the Object class's equals checks if two strings are equal 
+	 * part class's equals checks if two serial numbers are equal
 	 */
 	@Override
 	public boolean equals(Object obj) {
@@ -59,7 +59,10 @@ public class Part {
 	}
 	
 	/**
-	 * @return the hashcode of the serial number.
+	 * return the hash-code of the serial number.
+	 * @return hashcode of the serial number.
+	 * the Object class's hashCode returns the integer hash code value of the object.
+	 * part class's hashCode returns the hashcode of the serial number.
 	 */
 	@Override
 	public int hashCode() {
@@ -67,7 +70,8 @@ public class Part {
 	}
 	
 	/**
-	 * @return Return the string “Part(serial-number)”.
+	 * String representation of the part's serial number
+	 * @return the string “Part(serial number)”.
 	 */
 	public String toString() {
 		return "Part(" + this.getSerial() + ")";
