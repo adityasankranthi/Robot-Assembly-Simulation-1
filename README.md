@@ -41,14 +41,20 @@ Friday 10pm deadline.*
 ### Review
 
 #### Did I correctly anticipate the difficulties?
+Yes, most of the test cases i was able correctly anticipate because I spent a considerable amount of my time planning on pen and paper to stick to the classes/ADTs description before starting to code.
 
 #### How did the plan go?
-
+I think the plan went well because I've implemented most of my functions with if else statements like I initially planned, I did find an alternative way with switch cases but I choose to stick with if else conditions. I initially though that I could maybe track the indices of the parts with serial number(which I anyways could'nt because it was randomly generated) to use in FixedRobot because I miss understood that we were not supposed to use any local variables but after I've seen one of my colleague ask a similar question on piazza I got clarity and finally ended up utilizing a local variable to implement some of the methods.
 ### Preview
 
 #### What should I do differently for next week's homework assignment?
+I basically studied chapter 2 the day the assignment was given to get a better understanding of ADTs
+Then I've did the lab1 to get myself comfortable with debugging the code 
+Then I've started planning my code according to the homework description and then finally coded.
+I think this approach has worked well for me and I want to stick to this routine but maybe I can study the chapter that is being taught before it is taught in class so that I can get more time to work on and understand the class better.
 
 #### Do I need more resources?
+I think the textbook and lectures were sufficient. On top of that piazza was very helpful.
 
 ## Optional Feedback
 
